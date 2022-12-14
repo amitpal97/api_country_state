@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.manwrapper{
+width: 1366px;
+display: flex;
+justify-content: space-between;
+margin: 0 auto;
+padding: 10px 0
+}
+
+.wrapper1{
+    width: 32%;
+    text-align: center;
+    border: 5px solid grey;
+    height:80vh;
+    border-radius: 10px;
+}
+input{
+    border: 1px solid gray;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px;
+    box-shadow: 5px 2px  16px 5px silver;
+    border:5px solid brown;
+    /* text-align: start; */
+}
+
+/* .wrapper2{ */
+    /* width: 32%; */
+    /* text-align: center; */
+/* } */
+/* .wrapper3{ */
+    /* width: 33%; */
+    /* text-align: center; */
+/* } */
+
+.countries{
+    font-size: 35px;
+}
+.states{
+    font-size: 35px;
+    
+}
+.cities{
+    font-size: 35px;
+}
