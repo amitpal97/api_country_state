@@ -55,12 +55,23 @@ var country = {
     },
   ],
 };
-var countryName = document.querySelector(".countryName");
-var data = country.countries.forEach((elm,index,array)=>{
-    var name=console.log(elm.countryName);
+// var countryName = document.querySelector(".countryName");
+var data = country.countries.forEach((elm)=>{
+console.log(elm.countryName.forEach((elm)=>{
+    console.log(elm);
+   var contryname = "<p></p> "
+   contryname.
+}));
+});
+
+var newData=data
+
+
+// forEach((elm,index,array)=>{
+    // var name=console.log(elm.countryName);
     // console.log(index);
     // console.log(array);
-    countryName.innerHTML =name;
-    });
+    // console.log(data);
+    // });
     // console.log(data.countryName);
 

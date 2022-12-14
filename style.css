@@ -15,7 +15,7 @@ padding: 10px 0
     width: 32%;
     text-align: center;
     border: 5px solid grey;
-    height:80vh;
+    /* height:80vh; */
     border-radius: 10px;
 }
 input{
@@ -47,4 +47,30 @@ input{
 }
 .cities{
     font-size: 35px;
+}
+
+
+.countryName{
+    padding: 5px;
+    margin: 10px;
+    font-size: 25px;
+    border: 2px solid black;
+    
+}
+
+
+.wrapper2{
+    width: 32%;
+    text-align: center;
+    border: 5px solid grey;
+    /* height:80vh; */
+    border-radius: 10px;
+}
+
+.wrapper3{
+    width: 32%;
+    text-align: center;
+    border: 5px solid grey;
+    /* height:80vh; */
+    border-radius: 10px;
 }
