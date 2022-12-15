@@ -24,59 +24,70 @@ function setData(apiData) {
 
   document.querySelectorAll(".countryName1").forEach((elm) => {
     // console.log(elm.dataset.iso2);
+    // console.log(elm);
     elm.addEventListener("click", function () {
-      // console.log(elm.textContent)
-      fetch(
-        `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states`,
-        requestOptions
-      )
-        .then((res) => res.json())
+      // if (elm.value == "") {
+      //   console.log("Empty state");
+      // } else {
+        // console.log(elm)
+        fetch(
+          `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states`,
+          requestOptions
+        )
+          .then((res) => res.json())
 
-        .then((result) => {
-          // console.log(elm);
-          for (var i = 0; i < result.length; i++) {
-            var wrapperDiv1 = `<div data-state_code="${result[i].iso2}" class="statesNew">${result[i].name}</div>`; //iso2 why
-            document.querySelectorAll(".statesNew");
-            wrapper1.innerHTML += wrapperDiv1;
-          }
+          .then((result) => {
+            // console.log(elm);
+            for (var i = 0; i < result.length; i++) {
+              var wrapperDiv1 = `<div data-state_code="${result[i].iso2}" class="statesNew">${result[i].name}</div>`; //iso2 why
+              document.querySelectorAll(".statesNew");
+              wrapper1.innerHTML += wrapperDiv1;
+            }
 
-          document.querySelectorAll(".statesNew").forEach((elem) => {
-            // console.log(elem);
+            document.querySelectorAll(".statesNew").forEach((elem) => {
+              console.log(elem);
+              // if(elem==""){
+              //   console.log("Empty data");
+              // }
 
-            elem.addEventListener("click", function () {
-              // console.log("hi");
-              fetch(
-                `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states/${elem.dataset.state_code}/cities`, //sate code and api
-                requestOptions
-              )
-                .then((res) => res.json())
-                .then((resultNew) => {
-                  console.log(resultNew);
-                  for (var i = 0; i < resultNew.length; i++) {
-                    var wrapperDiv2 = `<div data-state_code="${resultNew[i].state_code}" class="citesNew">${resultNew[i].name}</div>`;
-                    document.querySelectorAll(".citesNew");
-                    wrapper2.innerHTML += wrapperDiv2;
-                  }
-                  // document.querySelectorAll(".citesNew").forEach((elm) => {
-                  //   // console.log(elm);
-                  //   fetch(
-                  //     `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states/${elem.dataset.state_code}/cities/`,
-                  //     requestOptions
-                  //   )
-                  //     .then((res) => res.json())
-                  //     .then((resultCitiesJson) => {
-                  //       for (var i = 0; i < resultCitiesJson.length; i++) {
-                  //         var wrapperDivJson = `<div data-state_code="${resultCitiesJson[i].iso2}" class="cityJson">${resultCitiesJson[i].name}</div>`; //iso2 why
+              elem.addEventListener("click", function () {
+                
+                // console.log("hi");     
+                  //  console.log(elem.textContent)
 
-                  //         console.log(hii);
-                  //       }
-                  //       console.log(resultCitiesJson);
-                  //     });
-                  // });
-                });
+                fetch(
+                  `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states/${elem.dataset.state_code}/cities`, //sate code and api
+                  requestOptions
+                )
+                  .then((res) => res.json())
+                  .then((resultNew) => {
+                    console.log(resultNew);
+                    for (var i = 0; i < resultNew.length; i++) {
+                      var wrapperDiv2 = `<div data-state_code="${resultNew[i].state_code}" class="citesNew">${resultNew[i].name}</div>`;
+                      document.querySelectorAll(".citesNew");
+                      wrapper2.innerHTML += wrapperDiv2;
+                    }
+                    // document.querySelectorAll(".citesNew").forEach((elm) => {
+                    //   // console.log(elm);
+                    //   fetch(
+                    //     `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states/${elem.dataset.state_code}/cities/`,
+                    //     requestOptions
+                    //   )
+                    //     .then((res) => res.json())
+                    //     .then((resultCitiesJson) => {
+                    //       for (var i = 0; i < resultCitiesJson.length; i++) {
+                    //         var wrapperDivJson = `<div data-state_code="${resultCitiesJson[i].iso2}" class="cityJson">${resultCitiesJson[i].name}</div>`; //iso2 why
+
+                    //         console.log(hii);
+                    //       }
+                    //       console.log(resultCitiesJson);
+                    //     });
+                    // });
+                  });
+              });
             });
           });
-        });
+      // }
     });
   });
 }

@@ -62,7 +62,7 @@ input {
 
 .countryName1 {
     padding: 5px;
-    margin: 10px;
+    margin: 41px;
     font-size: 25px;
     border: 2px solid black;
 
@@ -96,7 +96,7 @@ input {
 
 .statesNew {
     padding: 5px;
-    margin: 10px;
+    margin: 41px;
     font-size: 25px;
     border: 2px solid black;
 }
@@ -107,11 +107,14 @@ input {
 
 .citesNew {
     padding: 5px;
-    margin: 10px;
+    margin: 41px;
     font-size: 25px;
     border: 2px solid black;
 }
 
 .citesNew:hover {
     background-color: aqua;
+}
+.dsp{
+    display: none;
 }
