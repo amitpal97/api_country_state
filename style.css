@@ -50,12 +50,15 @@ input{
 }
 
 
-.countryName{
+.countryName1{
     padding: 5px;
     margin: 10px;
     font-size: 25px;
     border: 2px solid black;
     
+}
+.countryName1:hover{
+    background-color:gray;;
 }
 
 
@@ -73,4 +76,23 @@ input{
     border: 5px solid grey;
     /* height:80vh; */
     border-radius: 10px;
+}
+.statesNew{
+    padding: 5px;
+    margin: 10px;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
+.statesNew:hover{
+    background-color:blueviolet;
+}
+.citesNew{
+    padding: 5px;
+    margin: 10px;
+    font-size: 25px;
+    border: 2px solid black;
+}
+.citesNew:hover{
+    background-color: aqua;
 }
