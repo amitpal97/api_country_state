@@ -35,7 +35,7 @@ function setData(apiData) {
         .then((result) => {
           // console.log(elm);
           for (var i = 0; i < result.length; i++) {
-            var wrapperDiv1 = `<div data-state_code="${result[i].iso2}" class="statesNew">${result[i].name}</div>`;//iso2 why
+            var wrapperDiv1 = `<div data-state_code="${result[i].iso2}" class="statesNew">${result[i].name}</div>`; //iso2 why
             document.querySelectorAll(".statesNew");
             wrapper1.innerHTML += wrapperDiv1;
           }
@@ -46,7 +46,7 @@ function setData(apiData) {
             elem.addEventListener("click", function () {
               // console.log("hi");
               fetch(
-                `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states/${elem.dataset.state_code}/cities`,//sate code and api
+                `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states/${elem.dataset.state_code}/cities`, //sate code and api
                 requestOptions
               )
                 .then((res) => res.json())
@@ -57,16 +57,25 @@ function setData(apiData) {
                     document.querySelectorAll(".citesNew");
                     wrapper2.innerHTML += wrapperDiv2;
                   }
-                 
+                  // document.querySelectorAll(".citesNew").forEach((elm) => {
+                  //   // console.log(elm);
+                  //   fetch(
+                  //     `https://api.countrystatecity.in/v1/countries/${elm.dataset.iso2}/states/${elem.dataset.state_code}/cities/`,
+                  //     requestOptions
+                  //   )
+                  //     .then((res) => res.json())
+                  //     .then((resultCitiesJson) => {
+                  //       for (var i = 0; i < resultCitiesJson.length; i++) {
+                  //         var wrapperDivJson = `<div data-state_code="${resultCitiesJson[i].iso2}" class="cityJson">${resultCitiesJson[i].name}</div>`; //iso2 why
+
+                  //         console.log(hii);
+                  //       }
+                  //       console.log(resultCitiesJson);
+                  //     });
+                  // });
                 });
-
             });
-
-
-
           });
-
-
         });
     });
   });
