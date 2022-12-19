@@ -22,7 +22,7 @@ body{
     border: 5px solid grey;
     /* height:80vh; */
     border-radius: 10px;
-    background-color: grey;
+    background-color:bisque;
 }
 
 input {
@@ -79,7 +79,7 @@ input {
     text-align: center;
     border: 5px solid grey;
     /* height:80vh; */
-    background-color: grey;
+    background-color:aliceblue;
 
     border-radius: 10px;
 }
@@ -89,7 +89,7 @@ input {
     text-align: center;
     border: 5px solid grey;
     /* height:80vh; */
-    background-color: grey;
+    background-color:cadetblue;
 
     border-radius: 10px;
 }
@@ -117,4 +117,8 @@ input {
 }
 .dsp{
     display: none;
+}
+
+.dsb{
+    display: block;
 }
