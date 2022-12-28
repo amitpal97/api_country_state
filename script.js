@@ -19,7 +19,7 @@
 //     wrapper.innerHTML += wrapperDiv;
 //     // wrapper2.innerHTML += wrapperDiv2;
 //   }
-  
+
 //   document.querySelectorAll(".countryName1").forEach((elm) => {
 //     // elm.preventdefault();
 //     // console.log(elm.dataset.iso2);
@@ -95,10 +95,7 @@
 //   .then((result) => setData(result))
 //   .catch((error) => console.log("error", error));
 
-
-
-// by select
-
+// by select tag
 
 var countryName = document.querySelector(".countryName");
 var statesName = document.querySelector(".statesName");
@@ -106,6 +103,7 @@ var citesName = document.querySelector(".citesName");
 var para = document.querySelector(".notFoundState");
 var paraCity = document.querySelector(".notFoundcities");
 // console.log(paraCity);
+// console.log(paraCity.classList);
 
 requestData = {
   method: "GET",
@@ -133,7 +131,7 @@ countryName.addEventListener("change", function (event) {
   // console.log(event);
   // citesName.classList.add("dsb");
   statesName.classList.remove("dsp");
-  para.classList.remove("dsb");
+  para.classList.add("notFoundState");
   fetch(
     `https://api.countrystatecity.in/v1/countries/${event.target.value}/states`,
     //sate code and api
@@ -151,12 +149,12 @@ countryName.addEventListener("change", function (event) {
         statesName.innerHTML = resStateNew;
       } else {
         statesName.classList.add("dsp");
-        para.classList.add("dsb");
+        para.classList.remove("notFoundState");
       }
       statesName.addEventListener("change", function (even) {
         // console.log(even.target.value);
-        citesName.classList.remove("dsp");
-        paraCity.classList.remove("dsb");
+        // citesName.classList.remove("dsp");
+        // paraCity.classList.remove("dsb");
 
         fetch(
           `https://api.countrystatecity.in/v1/countries/${event.target.value}/states/${even.target.value}/cities`,
@@ -172,13 +170,11 @@ countryName.addEventListener("change", function (event) {
               }
               citesName.innerHTML = resCitiesNew;
             } else {
-              
               citesName.classList.add("dsp");
               paraCity.classList.add("dsb");
-              // citesName.classList.add("dsb");
+              // paraCity.style.display="block"
             }
           });
       });
     });
-  });
-  
+});
