@@ -1,4 +1,120 @@
-* {
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+}
+
+.manwrapper {
+    width: 1366px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: black;
+}
+
+.wrapper1 {
+    width: 32%;
+    text-align: center;
+    border: 5px solid grey;
+    border-radius: 10px;
+    background-color:bisque;
+    height: 500px;
+}
+
+input {
+    border: 1px solid gray;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px;
+    box-shadow: 5px 2px 16px 5px silver;
+    border: 5px solid brown;
+
+}
+
+
+
+.countries {
+    font-size: 35px;
+}
+
+.states {
+    font-size: 35px;
+
+}
+
+.cities {
+    font-size: 35px;
+}
+
+
+.countryName1 {
+    padding: 5px;
+    margin: 41px;
+    font-size: 25px;
+    border: 2px solid black;
+
+}
+
+.countryName1:hover {
+    background-color: blue;
+    ;
+}
+
+
+.wrapper2 {
+    width: 32%;
+    text-align: center;
+    border: 5px solid grey;
+
+    background-color:aliceblue;
+
+    border-radius: 10px;
+}
+
+.wrapper3 {
+    width: 32%;
+    text-align: center;
+
+    background-color:cadetblue;
+
+    border-radius: 10px;
+}
+
+.statesNew {
+    padding: 5px;
+    margin: 41px;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
+.statesNew:hover {
+    background-color: blueviolet;
+}
+
+.citesNew {
+    padding: 5px;
+    margin: 41px;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
+.citesNew:hover {
+    background-color: aqua;
+}
+.dsp{
+    display: none;
+}
+ */
+
+
+
+
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,6 +139,7 @@ body{
     /* height:80vh; */
     border-radius: 10px;
     background-color:bisque;
+    height: 500px;
 }
 
 input {
@@ -122,3 +239,17 @@ input {
 .dsb{
     display: block;
 }
+
+.notFoundState{
+    display: none;
+}
+
+.dsb{
+    display: block;
+}
+  .dsp{
+    display: none;
+  }
+  .notFoundcities{
+    display: none;
+  }
