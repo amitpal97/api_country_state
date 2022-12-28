@@ -153,8 +153,8 @@ countryName.addEventListener("change", function (event) {
       }
       statesName.addEventListener("change", function (even) {
         // console.log(even.target.value);
-        // citesName.classList.remove("dsp");
-        // paraCity.classList.remove("dsb");
+        citesName.classList.remove("dsp");
+        paraCity.classList.add("notFoundcities");
 
         fetch(
           `https://api.countrystatecity.in/v1/countries/${event.target.value}/states/${even.target.value}/cities`,
@@ -171,7 +171,7 @@ countryName.addEventListener("change", function (event) {
               citesName.innerHTML = resCitiesNew;
             } else {
               citesName.classList.add("dsp");
-              paraCity.classList.add("dsb");
+              paraCity.classList.remove("notFoundcities");
               // paraCity.style.display="block"
             }
           });
